@@ -8,5 +8,9 @@ export default new Router({
     path: '/',
     name: 'main',
     component: () => import('@/views/main.vue')
+  }, {
+    path: '/AntVG6',
+    name: 'AntVG6',
+    component: () => import('@/views/modules/AntVG6.vue')
   }]
 })

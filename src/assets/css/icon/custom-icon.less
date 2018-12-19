@@ -1,0 +1,1941 @@
+@import 'variables';
+
+@font-face {
+    font-family: '@{icomoon-font-family}';
+    src: url('@{icomoon-font-path}/@{icomoon-font-family}.ttf?42ae34')
+            format('truetype'),
+        url('@{icomoon-font-path}/@{icomoon-font-family}.woff?42ae34')
+            format('woff'),
+        url('@{icomoon-font-path}/@{icomoon-font-family}.svg?42ae34#@{icomoon-font-family}')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '@{icomoon-font-family}' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-resource-adjust {
+    &:before {
+        content: @icon-resource-adjust;
+    }
+}
+.icon-resource-analysis {
+    &:before {
+        content: @icon-resource-analysis;
+    }
+}
+.icon-resource-change {
+    &:before {
+        content: @icon-resource-change;
+    }
+}
+.icon-resource-disk {
+    &:before {
+        content: @icon-resource-disk;
+    }
+}
+.icon-resource-ip {
+    &:before {
+        content: @icon-resource-ip;
+    }
+}
+.icon-optimization-info03 {
+    &:before {
+        content: @icon-optimization-info03;
+    }
+}
+.icon-optimization-info04 {
+    &:before {
+        content: @icon-optimization-info04;
+    }
+}
+.icon-computing-resource-o {
+    &:before {
+        content: @icon-computing-resource-o;
+    }
+}
+.icon-orchestration-o {
+    &:before {
+        content: @icon-orchestration-o;
+    }
+}
+.icon-basis-o {
+    &:before {
+        content: @icon-basis-o;
+    }
+}
+.icon-deploy-1-o {
+    &:before {
+        content: @icon-deploy-1-o;
+    }
+}
+.icon-cpu-o {
+    &:before {
+        content: @icon-cpu-o;
+    }
+}
+.icon-ram-2-o {
+    &:before {
+        content: @icon-ram-2-o;
+    }
+}
+.icon-storage-3-o {
+    &:before {
+        content: @icon-storage-3-o;
+    }
+}
+.icon-user {
+    &:before {
+        content: @icon-user;
+    }
+}
+.icon-cost {
+    &:before {
+        content: @icon-cost;
+    }
+}
+.icon-cost-1-o {
+    &:before {
+        content: @icon-cost-1-o;
+    }
+}
+.icon-work-fail {
+    &:before {
+        content: @icon-work-fail;
+    }
+}
+.icon-module-logo-centos {
+    &:before {
+        content: @icon-module-logo-centos;
+    }
+}
+.icon-module-logo-ubuntu {
+    &:before {
+        content: @icon-module-logo-ubuntu;
+    }
+}
+.icon-module-logo-windows {
+    &:before {
+        content: @icon-module-logo-windows;
+    }
+}
+.icon-scene-inspect {
+    &:before {
+        content: @icon-scene-inspect;
+    }
+}
+.icon-scene-report {
+    &:before {
+        content: @icon-scene-report;
+    }
+}
+.icon-scene-survey {
+    &:before {
+        content: @icon-scene-survey;
+    }
+}
+.icon-scene-upload01 {
+    &:before {
+        content: @icon-scene-upload01;
+    }
+}
+.icon-scene-upload02 {
+    &:before {
+        content: @icon-scene-upload02;
+    }
+}
+.icon-information {
+    &:before {
+        content: @icon-information;
+    }
+}
+.icon-cloud-environment-2 {
+    &:before {
+        content: @icon-cloud-environment-2;
+    }
+}
+.icon-script {
+    &:before {
+        content: @icon-script;
+    }
+}
+.icon-instance {
+    &:before {
+        content: @icon-instance;
+    }
+}
+.icon-lmage {
+    &:before {
+        content: @icon-lmage;
+    }
+}
+.icon-safety {
+    &:before {
+        content: @icon-safety;
+    }
+}
+.icon-duration {
+    &:before {
+        content: @icon-duration;
+    }
+}
+.icon-configuration {
+    &:before {
+        content: @icon-configuration;
+    }
+}
+.icon-alarm {
+    &:before {
+        content: @icon-alarm;
+    }
+}
+.icon-filter {
+    &:before {
+        content: @icon-filter;
+    }
+}
+.icon-host-template {
+    &:before {
+        content: @icon-host-template;
+    }
+}
+.icon-system {
+    &:before {
+        content: @icon-system;
+    }
+}
+.icon-no-monitoring {
+    &:before {
+        content: @icon-no-monitoring;
+    }
+}
+.icon-cloud-monitoring-o {
+    &:before {
+        content: @icon-cloud-monitoring-o;
+    }
+}
+.icon-cloud-operation-o {
+    &:before {
+        content: @icon-cloud-operation-o;
+    }
+}
+.icon-menu-scene-o {
+    &:before {
+        content: @icon-menu-scene-o;
+    }
+}
+.icon-work-parm {
+    &:before {
+        content: @icon-work-parm;
+    }
+}
+.icon-work-execute {
+    &:before {
+        content: @icon-work-execute;
+    }
+}
+.icon-work-success {
+    &:before {
+        content: @icon-work-success;
+    }
+}
+.icon-upload-o {
+    &:before {
+        content: @icon-upload-o;
+    }
+}
+.icon-template-immediately-o {
+    &:before {
+        content: @icon-template-immediately-o;
+    }
+}
+.icon-template-timing-o {
+    &:before {
+        content: @icon-template-timing-o;
+    }
+}
+.icon-groups-btn-add {
+    &:before {
+        content: @icon-groups-btn-add;
+    }
+}
+.icon-groups-btn-del {
+    &:before {
+        content: @icon-groups-btn-del;
+    }
+}
+.icon-groups-btn-upload {
+    &:before {
+        content: @icon-groups-btn-upload;
+    }
+}
+.icon-groups_icon_help {
+    &:before {
+        content: @icon-groups_icon_help;
+    }
+}
+.icon-groups-host-o {
+    &:before {
+        content: @icon-groups-host-o;
+    }
+}
+.icon-groups-relevance-o {
+    &:before {
+        content: @icon-groups-relevance-o;
+    }
+}
+.icon-groups-selected {
+    &:before {
+        content: @icon-groups-selected;
+    }
+}
+.icon-home-review-o {
+    &:before {
+        content: @icon-home-review-o;
+    }
+}
+.icon-menu-groups-o {
+    &:before {
+        content: @icon-menu-groups-o;
+    }
+}
+.icon-menu-operation-o {
+    &:before {
+        content: @icon-menu-operation-o;
+    }
+}
+.icon-menu-operation-center-o {
+    &:before {
+        content: @icon-menu-operation-center-o;
+    }
+}
+.icon-menu-template-o {
+    &:before {
+        content: @icon-menu-template-o;
+    }
+}
+.icon-menu-template-ault-o {
+    &:before {
+        content: @icon-menu-template-ault-o;
+    }
+}
+.icon-menu-work-o {
+    &:before {
+        content: @icon-menu-work-o;
+    }
+}
+.icon-template-edit-o {
+    &:before {
+        content: @icon-template-edit-o;
+    }
+}
+.icon-template-time-o {
+    &:before {
+        content: @icon-template-time-o;
+    }
+}
+.icon-work-btn-close .path1 {
+    &:before {
+        content: @icon-work-btn-close-path1;
+        color: rgb(0, 0, 0);
+    }
+}
+.icon-work-btn-close .path2 {
+    &:before {
+        content: @icon-work-btn-close-path2;
+        margin-left: -1em;
+        color: rgb(255, 255, 255);
+    }
+}
+.icon-work-btn-open .path1 {
+    &:before {
+        content: @icon-work-btn-open-path1;
+        color: rgb(0, 0, 0);
+    }
+}
+.icon-work-btn-open .path2 {
+    &:before {
+        content: @icon-work-btn-open-path2;
+        margin-left: -1em;
+        color: rgb(255, 255, 255);
+    }
+}
+.icon-work-link {
+    &:before {
+        content: @icon-work-link;
+    }
+}
+.icon-work_icon_log {
+    &:before {
+        content: @icon-work_icon_log;
+    }
+}
+.icon-system-logo-0 {
+    &:before {
+        content: @icon-system-logo-0;
+    }
+}
+.icon-mail-1-o {
+    &:before {
+        content: @icon-mail-1-o;
+    }
+}
+.icon-sms-o {
+    &:before {
+        content: @icon-sms-o;
+    }
+}
+.icon-quota-o {
+    &:before {
+        content: @icon-quota-o;
+    }
+}
+.icon-certification-o {
+    &:before {
+        content: @icon-certification-o;
+    }
+}
+.icon-recycle-bin-o {
+    &:before {
+        content: @icon-recycle-bin-o;
+    }
+}
+.icon-monitor-o-1 {
+    &:before {
+        content: @icon-monitor-o-1;
+    }
+}
+.icon-billing-strategy-o {
+    &:before {
+        content: @icon-billing-strategy-o;
+    }
+}
+.icon-billing-configuration-o {
+    &:before {
+        content: @icon-billing-configuration-o;
+    }
+}
+.icon-organization-o-1 {
+    &:before {
+        content: @icon-organization-o-1;
+    }
+}
+.icon-already-applied-o {
+    &:before {
+        content: @icon-already-applied-o;
+    }
+}
+.icon-no-data-o-1 {
+    &:before {
+        content: @icon-no-data-o-1;
+    }
+}
+.icon-data--resource-o {
+    &:before {
+        content: @icon-data--resource-o;
+    }
+}
+.icon-collection-service-o {
+    &:before {
+        content: @icon-collection-service-o;
+    }
+}
+.icon-data-processing-o {
+    &:before {
+        content: @icon-data-processing-o;
+    }
+}
+.icon-data-governance-o {
+    &:before {
+        content: @icon-data-governance-o;
+    }
+}
+.icon-default-o-1 {
+    &:before {
+        content: @icon-default-o-1;
+    }
+}
+.icon-star-1 {
+    &:before {
+        content: @icon-star-1;
+    }
+}
+.icon-star-2 {
+    &:before {
+        content: @icon-star-2;
+    }
+}
+.icon-crown {
+    &:before {
+        content: @icon-crown;
+    }
+}
+.icon-flower-1 {
+    &:before {
+        content: @icon-flower-1;
+    }
+}
+.icon-flower-2 {
+    &:before {
+        content: @icon-flower-2;
+    }
+}
+.icon-no-comment-o {
+    &:before {
+        content: @icon-no-comment-o;
+    }
+}
+.icon-line-chart {
+    &:before {
+        content: @icon-line-chart;
+    }
+}
+.icon-histogram-o {
+    &:before {
+        content: @icon-histogram-o;
+    }
+}
+.icon-pie-chart-o {
+    &:before {
+        content: @icon-pie-chart-o;
+    }
+}
+.icon-topn-form {
+    &:before {
+        content: @icon-topn-form;
+    }
+}
+.icon-card-o {
+    &:before {
+        content: @icon-card-o;
+    }
+}
+.icon-scatter-plot-o {
+    &:before {
+        content: @icon-scatter-plot-o;
+    }
+}
+.icon-thermal-map {
+    &:before {
+        content: @icon-thermal-map;
+    }
+}
+.icon-relation-chart-o {
+    &:before {
+        content: @icon-relation-chart-o;
+    }
+}
+.icon-cost-analysis-o {
+    &:before {
+        content: @icon-cost-analysis-o;
+    }
+}
+.icon-cost-overview-o {
+    &:before {
+        content: @icon-cost-overview-o;
+    }
+}
+.icon-charge-details-o {
+    &:before {
+        content: @icon-charge-details-o;
+    }
+}
+.icon-big-screen-o {
+    &:before {
+        content: @icon-big-screen-o;
+    }
+}
+.icon-standard-screen-o {
+    &:before {
+        content: @icon-standard-screen-o;
+    }
+}
+.icon--1-01 {
+    &:before {
+        content: @icon--1-01;
+    }
+}
+.icon-cloud-map-o {
+    &:before {
+        content: @icon-cloud-map-o;
+    }
+}
+.icon-dashboard-o {
+    &:before {
+        content: @icon-dashboard-o;
+    }
+}
+.icon-refresh-2-o {
+    &:before {
+        content: @icon-refresh-2-o;
+    }
+}
+.icon-refresh-cycle-o {
+    &:before {
+        content: @icon-refresh-cycle-o;
+    }
+}
+.icon-edit-o {
+    &:before {
+        content: @icon-edit-o;
+    }
+}
+.icon-edit-1-o {
+    &:before {
+        content: @icon-edit-1-o;
+    }
+}
+.icon-save-o {
+    &:before {
+        content: @icon-save-o;
+    }
+}
+.icon-zoom-o {
+    &:before {
+        content: @icon-zoom-o;
+    }
+}
+.icon-default-avatar-o {
+    &:before {
+        content: @icon-default-avatar-o;
+    }
+}
+.icon-home-o {
+    &:before {
+        content: @icon-home-o;
+    }
+}
+.icon-single-line-of-text-o {
+    &:before {
+        content: @icon-single-line-of-text-o;
+    }
+}
+.icon-multi-line-text-o {
+    &:before {
+        content: @icon-multi-line-text-o;
+    }
+}
+.icon-rich-text-o {
+    &:before {
+        content: @icon-rich-text-o;
+    }
+}
+.icon-drop-down-menu-o {
+    &:before {
+        content: @icon-drop-down-menu-o;
+    }
+}
+.icon-single-selection-o {
+    &:before {
+        content: @icon-single-selection-o;
+    }
+}
+.icon-multiple-selection-o {
+    &:before {
+        content: @icon-multiple-selection-o;
+    }
+}
+.icon-integer-o {
+    &:before {
+        content: @icon-integer-o;
+    }
+}
+.icon-decimal-o {
+    &:before {
+        content: @icon-decimal-o;
+    }
+}
+.icon-image-o {
+    &:before {
+        content: @icon-image-o;
+    }
+}
+.icon-annex-o {
+    &:before {
+        content: @icon-annex-o;
+    }
+}
+.icon-time-o {
+    &:before {
+        content: @icon-time-o;
+    }
+}
+.icon-reference-o {
+    &:before {
+        content: @icon-reference-o;
+    }
+}
+.icon-connecting-host-o {
+    &:before {
+        content: @icon-connecting-host-o;
+    }
+}
+.icon-host-configuration-o {
+    &:before {
+        content: @icon-host-configuration-o;
+    }
+}
+.icon-process-management-o {
+    &:before {
+        content: @icon-process-management-o;
+    }
+}
+.icon-cluster-o {
+    &:before {
+        content: @icon-cluster-o;
+    }
+}
+.icon-store-o {
+    &:before {
+        content: @icon-store-o;
+    }
+}
+.icon-container-o {
+    &:before {
+        content: @icon-container-o;
+    }
+}
+.icon-list-1-o {
+    &:before {
+        content: @icon-list-1-o;
+    }
+}
+.icon-quota-management-o {
+    &:before {
+        content: @icon-quota-management-o;
+    }
+}
+.icon-resource-view-o {
+    &:before {
+        content: @icon-resource-view-o;
+    }
+}
+.icon-prompt-o {
+    &:before {
+        content: @icon-prompt-o;
+    }
+}
+.icon-sms-configuration-o {
+    &:before {
+        content: @icon-sms-configuration-o;
+    }
+}
+.icon-export-1-o {
+    &:before {
+        content: @icon-export-1-o;
+    }
+}
+.icon-import-1-o {
+    &:before {
+        content: @icon-import-1-o;
+    }
+}
+.icon-corporate-settings-o {
+    &:before {
+        content: @icon-corporate-settings-o;
+    }
+}
+.icon-security-group {
+    &:before {
+        content: @icon-security-group;
+    }
+}
+.icon-elastic-ip {
+    &:before {
+        content: @icon-elastic-ip;
+    }
+}
+.icon-network-1 {
+    &:before {
+        content: @icon-network-1;
+    }
+}
+.icon-load-balancing {
+    &:before {
+        content: @icon-load-balancing;
+    }
+}
+.icon-name-rule-o {
+    &:before {
+        content: @icon-name-rule-o;
+    }
+}
+.icon-ram-1-o {
+    &:before {
+        content: @icon-ram-1-o;
+    }
+}
+.icon-monitoring-components-o {
+    &:before {
+        content: @icon-monitoring-components-o;
+    }
+}
+.icon-hard-disk-o {
+    &:before {
+        content: @icon-hard-disk-o;
+    }
+}
+.icon-snapshot-o {
+    &:before {
+        content: @icon-snapshot-o;
+    }
+}
+.icon-warning-1-o {
+    &:before {
+        content: @icon-warning-1-o;
+    }
+}
+.icon-task-1-o {
+    &:before {
+        content: @icon-task-1-o;
+    }
+}
+.icon-connection {
+    &:before {
+        content: @icon-connection;
+    }
+}
+.icon-examples {
+    &:before {
+        content: @icon-examples;
+    }
+}
+.icon-disk {
+    &:before {
+        content: @icon-disk;
+    }
+}
+.icon-snapshot {
+    &:before {
+        content: @icon-snapshot;
+    }
+}
+.icon-lmage-1 {
+    &:before {
+        content: @icon-lmage-1;
+    }
+}
+.icon-Subnet {
+    &:before {
+        content: @icon-Subnet;
+    }
+}
+.icon-hosts {
+    &:before {
+        content: @icon-hosts;
+    }
+}
+.icon-data-storage {
+    &:before {
+        content: @icon-data-storage;
+    }
+}
+.icon-switch {
+    &:before {
+        content: @icon-switch;
+    }
+}
+.icon-authority-o {
+    &:before {
+        content: @icon-authority-o;
+    }
+}
+.icon-operation-log-1-o {
+    &:before {
+        content: @icon-operation-log-1-o;
+    }
+}
+.icon-system-configuration-o {
+    &:before {
+        content: @icon-system-configuration-o;
+    }
+}
+.icon-system-logo-o {
+    &:before {
+        content: @icon-system-logo-o;
+    }
+}
+.icon-mail-configuration-o {
+    &:before {
+        content: @icon-mail-configuration-o;
+    }
+}
+.icon-certified-o {
+    &:before {
+        content: @icon-certified-o;
+    }
+}
+.icon-approval-process-o {
+    &:before {
+        content: @icon-approval-process-o;
+    }
+}
+.icon-task-2-o {
+    &:before {
+        content: @icon-task-2-o;
+    }
+}
+.icon-host--1-o {
+    &:before {
+        content: @icon-host--1-o;
+    }
+}
+.icon-enlarge-1-o {
+    &:before {
+        content: @icon-enlarge-1-o;
+    }
+}
+.icon-block-o {
+    &:before {
+        content: @icon-block-o;
+    }
+}
+.icon-lists-o {
+    &:before {
+        content: @icon-lists-o;
+    }
+}
+.icon-logo {
+    &:before {
+        content: @icon-logo;
+    }
+}
+.icon-first {
+    &:before {
+        content: @icon-first;
+    }
+}
+.icon-last-page {
+    &:before {
+        content: @icon-last-page;
+    }
+}
+.icon-left {
+    &:before {
+        content: @icon-left;
+    }
+}
+.icon-right {
+    &:before {
+        content: @icon-right;
+    }
+}
+.icon-monitor-lists-o {
+    &:before {
+        content: @icon-monitor-lists-o;
+    }
+}
+.icon-operation-log-o {
+    &:before {
+        content: @icon-operation-log-o;
+    }
+}
+.icon-system-settings-o {
+    &:before {
+        content: @icon-system-settings-o;
+    }
+}
+.icon-rights-profile-o {
+    &:before {
+        content: @icon-rights-profile-o;
+    }
+}
+.icon-monitoring-overview-o {
+    &:before {
+        content: @icon-monitoring-overview-o;
+    }
+}
+.icon-approval-o {
+    &:before {
+        content: @icon-approval-o;
+    }
+}
+.icon-task-o {
+    &:before {
+        content: @icon-task-o;
+    }
+}
+.icon-host-template-o {
+    &:before {
+        content: @icon-host-template-o;
+    }
+}
+.icon-mirror-o {
+    &:before {
+        content: @icon-mirror-o;
+    }
+}
+.icon-script-o {
+    &:before {
+        content: @icon-script-o;
+    }
+}
+.icon-cloud-market-o {
+    &:before {
+        content: @icon-cloud-market-o;
+    }
+}
+.icon-site-o {
+    &:before {
+        content: @icon-site-o;
+    }
+}
+.icon-resource-group-o {
+    &:before {
+        content: @icon-resource-group-o;
+    }
+}
+.icon-host-management-o {
+    &:before {
+        content: @icon-host-management-o;
+    }
+}
+.icon-flexibility-o {
+    &:before {
+        content: @icon-flexibility-o;
+    }
+}
+.icon-job-management-o {
+    &:before {
+        content: @icon-job-management-o;
+    }
+}
+.icon-health-management-o {
+    &:before {
+        content: @icon-health-management-o;
+    }
+}
+.icon-work-order-management-o {
+    &:before {
+        content: @icon-work-order-management-o;
+    }
+}
+.icon-cloud-environment-1-o {
+    &:before {
+        content: @icon-cloud-environment-1-o;
+    }
+}
+.icon-monitor-2-o {
+    &:before {
+        content: @icon-monitor-2-o;
+    }
+}
+.icon-audit-o {
+    &:before {
+        content: @icon-audit-o;
+    }
+}
+.icon-company-1-o {
+    &:before {
+        content: @icon-company-1-o;
+    }
+}
+.icon-increase-1-o {
+    &:before {
+        content: @icon-increase-1-o;
+    }
+}
+.icon-return-1 {
+    &:before {
+        content: @icon-return-1;
+    }
+}
+.icon-unfold-1 {
+    &:before {
+        content: @icon-unfold-1;
+    }
+}
+.icon-scale {
+    &:before {
+        content: @icon-scale;
+    }
+}
+.icon-Scale-1 {
+    &:before {
+        content: @icon-Scale-1;
+    }
+}
+.icon-platform-services-o {
+    &:before {
+        content: @icon-platform-services-o;
+    }
+}
+.icon-vmware-o {
+    &:before {
+        content: @icon-vmware-o;
+    }
+}
+.icon-search-1-o {
+    &:before {
+        content: @icon-search-1-o;
+    }
+}
+.icon-warning {
+    &:before {
+        content: @icon-warning;
+    }
+}
+.icon-plus-1-o {
+    &:before {
+        content: @icon-plus-1-o;
+    }
+}
+.icon-check {
+    &:before {
+        content: @icon-check;
+    }
+}
+.icon-selected-1-o {
+    &:before {
+        content: @icon-selected-1-o;
+    }
+}
+.icon-default-o {
+    &:before {
+        content: @icon-default-o;
+    }
+}
+.icon-operating {
+    &:before {
+        content: @icon-operating;
+    }
+}
+.icon-application-2-o {
+    &:before {
+        content: @icon-application-2-o;
+    }
+}
+.icon-submit-o {
+    &:before {
+        content: @icon-submit-o;
+    }
+}
+.icon-end-o {
+    &:before {
+        content: @icon-end-o;
+    }
+}
+.icon-review-1-o {
+    &:before {
+        content: @icon-review-1-o;
+    }
+}
+.icon-by-o {
+    &:before {
+        content: @icon-by-o;
+    }
+}
+.icon-overrule-o {
+    &:before {
+        content: @icon-overrule-o;
+    }
+}
+.icon-reject-o {
+    &:before {
+        content: @icon-reject-o;
+    }
+}
+.icon-delete-1 {
+    &:before {
+        content: @icon-delete-1;
+    }
+}
+.icon-monitoring-list-o {
+    &:before {
+        content: @icon-monitoring-list-o;
+    }
+}
+.icon-alarm-list-o {
+    &:before {
+        content: @icon-alarm-list-o;
+    }
+}
+.icon-alarm-rules-o {
+    &:before {
+        content: @icon-alarm-rules-o;
+    }
+}
+.icon-alarm-notification-o {
+    &:before {
+        content: @icon-alarm-notification-o;
+    }
+}
+.icon-approval-management-o {
+    &:before {
+        content: @icon-approval-management-o;
+    }
+}
+.icon-audit-log-o {
+    &:before {
+        content: @icon-audit-log-o;
+    }
+}
+.icon-corporate-informatio-o {
+    &:before {
+        content: @icon-corporate-informatio-o;
+    }
+}
+.icon-project-management-o {
+    &:before {
+        content: @icon-project-management-o;
+    }
+}
+.icon-user-management {
+    &:before {
+        content: @icon-user-management;
+    }
+}
+.icon-square-o {
+    &:before {
+        content: @icon-square-o;
+    }
+}
+.icon-square-selected-o {
+    &:before {
+        content: @icon-square-selected-o;
+    }
+}
+.icon-ram-o {
+    &:before {
+        content: @icon-ram-o;
+    }
+}
+.icon-storage-2-o {
+    &:before {
+        content: @icon-storage-2-o;
+    }
+}
+.icon-more-1 {
+    &:before {
+        content: @icon-more-1;
+    }
+}
+.icon-label-o {
+    &:before {
+        content: @icon-label-o;
+    }
+}
+.icon-quick-start-o {
+    &:before {
+        content: @icon-quick-start-o;
+    }
+}
+.icon-overview-o {
+    &:before {
+        content: @icon-overview-o;
+    }
+}
+.icon-analysis-o {
+    &:before {
+        content: @icon-analysis-o;
+    }
+}
+.icon-monitor-1-o {
+    &:before {
+        content: @icon-monitor-1-o;
+    }
+}
+.icon-add-to-o {
+    &:before {
+        content: @icon-add-to-o;
+    }
+}
+.icon-storage {
+    &:before {
+        content: @icon-storage;
+    }
+}
+.icon-partition {
+    &:before {
+        content: @icon-partition;
+    }
+}
+.icon-status {
+    &:before {
+        content: @icon-status;
+    }
+}
+.icon-network {
+    &:before {
+        content: @icon-network;
+    }
+}
+.icon-refresh-1-o {
+    &:before {
+        content: @icon-refresh-1-o;
+    }
+}
+.icon-remind {
+    &:before {
+        content: @icon-remind;
+    }
+}
+.icon-edit {
+    &:before {
+        content: @icon-edit;
+    }
+}
+.icon-delete {
+    &:before {
+        content: @icon-delete;
+    }
+}
+.icon-close-1-o {
+    &:before {
+        content: @icon-close-1-o;
+    }
+}
+.icon-open-up-o {
+    &:before {
+        content: @icon-open-up-o;
+    }
+}
+.icon-multi-source-cloud-o {
+    &:before {
+        content: @icon-multi-source-cloud-o;
+    }
+}
+.icon-resource-monitoring-o {
+    &:before {
+        content: @icon-resource-monitoring-o;
+    }
+}
+.icon-automation-o {
+    &:before {
+        content: @icon-automation-o;
+    }
+}
+.icon-integrated-1-o {
+    &:before {
+        content: @icon-integrated-1-o;
+    }
+}
+.icon-organization-o {
+    &:before {
+        content: @icon-organization-o;
+    }
+}
+.icon-govern-o {
+    &:before {
+        content: @icon-govern-o;
+    }
+}
+.icon-application-1-o {
+    &:before {
+        content: @icon-application-1-o;
+    }
+}
+.icon-data-o {
+    &:before {
+        content: @icon-data-o;
+    }
+}
+.icon-platform-o {
+    &:before {
+        content: @icon-platform-o;
+    }
+}
+.icon-resources-2-o {
+    &:before {
+        content: @icon-resources-2-o;
+    }
+}
+.icon-basic-application-o {
+    &:before {
+        content: @icon-basic-application-o;
+    }
+}
+.icon-intelligence-application-o {
+    &:before {
+        content: @icon-intelligence-application-o;
+    }
+}
+.icon-shujuzhongxin-o {
+    &:before {
+        content: @icon-shujuzhongxin-o;
+    }
+}
+.icon-jisuanfuwu-o {
+    &:before {
+        content: @icon-jisuanfuwu-o;
+    }
+}
+.icon-cunchufuwu-o {
+    &:before {
+        content: @icon-cunchufuwu-o;
+    }
+}
+.icon-keshihuajiankong-o {
+    &:before {
+        content: @icon-keshihuajiankong-o;
+    }
+}
+.icon-yitihuaguanli-o {
+    &:before {
+        content: @icon-yitihuaguanli-o;
+    }
+}
+.icon-zidonghuayunwei-o {
+    &:before {
+        content: @icon-zidonghuayunwei-o;
+    }
+}
+.icon-gongjuzujian-o {
+    &:before {
+        content: @icon-gongjuzujian-o;
+    }
+}
+.icon-shujufuwu-o {
+    &:before {
+        content: @icon-shujufuwu-o;
+    }
+}
+.icon-yingyongfuwu-o {
+    &:before {
+        content: @icon-yingyongfuwu-o;
+    }
+}
+.icon-cloud-environment {
+    &:before {
+        content: @icon-cloud-environment;
+    }
+}
+.icon-network-card-o {
+    &:before {
+        content: @icon-network-card-o;
+    }
+}
+.icon-physical-machine-o {
+    &:before {
+        content: @icon-physical-machine-o;
+    }
+}
+.icon-no-data-o {
+    &:before {
+        content: @icon-no-data-o;
+    }
+}
+.icon-return-o {
+    &:before {
+        content: @icon-return-o;
+    }
+}
+.icon-delete-o {
+    &:before {
+        content: @icon-delete-o;
+    }
+}
+.icon-unfold-o {
+    &:before {
+        content: @icon-unfold-o;
+    }
+}
+.icon-collapse-o {
+    &:before {
+        content: @icon-collapse-o;
+    }
+}
+.icon-all-1 {
+    &:before {
+        content: @icon-all-1;
+    }
+}
+.icon-list-o {
+    &:before {
+        content: @icon-list-o;
+    }
+}
+.icon-orders-o {
+    &:before {
+        content: @icon-orders-o;
+    }
+}
+.icon-review-o {
+    &:before {
+        content: @icon-review-o;
+    }
+}
+.icon-work-order-o {
+    &:before {
+        content: @icon-work-order-o;
+    }
+}
+.icon-elastic-calculation-o {
+    &:before {
+        content: @icon-elastic-calculation-o;
+    }
+}
+.icon-configuration-o {
+    &:before {
+        content: @icon-configuration-o;
+    }
+}
+.icon-stable-o {
+    &:before {
+        content: @icon-stable-o;
+    }
+}
+.icon-management-o {
+    &:before {
+        content: @icon-management-o;
+    }
+}
+.icon-network-2-o {
+    &:before {
+        content: @icon-network-2-o;
+    }
+}
+.icon-safety-1-o {
+    &:before {
+        content: @icon-safety-1-o;
+    }
+}
+.icon-cost-o {
+    &:before {
+        content: @icon-cost-o;
+    }
+}
+.icon-integrated-o {
+    &:before {
+        content: @icon-integrated-o;
+    }
+}
+.icon-customer-service-1-o {
+    &:before {
+        content: @icon-customer-service-1-o;
+    }
+}
+.icon-performance-analysis-o {
+    &:before {
+        content: @icon-performance-analysis-o;
+    }
+}
+.icon-cost-optimization-o {
+    &:before {
+        content: @icon-cost-optimization-o;
+    }
+}
+.icon-budget-analysis-o {
+    &:before {
+        content: @icon-budget-analysis-o;
+    }
+}
+.icon-iaas-1-o {
+    &:before {
+        content: @icon-iaas-1-o;
+    }
+}
+.icon-paas-1-o {
+    &:before {
+        content: @icon-paas-1-o;
+    }
+}
+.icon-daas-1-o {
+    &:before {
+        content: @icon-daas-1-o;
+    }
+}
+.icon-calculation-o {
+    &:before {
+        content: @icon-calculation-o;
+    }
+}
+.icon-storage-1-o {
+    &:before {
+        content: @icon-storage-1-o;
+    }
+}
+.icon-network-1-o {
+    &:before {
+        content: @icon-network-1-o;
+    }
+}
+.icon-database-o {
+    &:before {
+        content: @icon-database-o;
+    }
+}
+.icon-cdn-o {
+    &:before {
+        content: @icon-cdn-o;
+    }
+}
+.icon-phone-1-o {
+    &:before {
+        content: @icon-phone-1-o;
+    }
+}
+.icon-mail-o {
+    &:before {
+        content: @icon-mail-o;
+    }
+}
+.icon-ali-cloud-o {
+    &:before {
+        content: @icon-ali-cloud-o;
+    }
+}
+.icon-tencent-cloud-o {
+    &:before {
+        content: @icon-tencent-cloud-o;
+    }
+}
+.icon-cutover-1-o {
+    &:before {
+        content: @icon-cutover-1-o;
+    }
+}
+.icon-cutover-o {
+    &:before {
+        content: @icon-cutover-o;
+    }
+}
+.icon-label-management-o {
+    &:before {
+        content: @icon-label-management-o;
+    }
+}
+.icon-station-news-o {
+    &:before {
+        content: @icon-station-news-o;
+    }
+}
+.icon-balance-recharge-o {
+    &:before {
+        content: @icon-balance-recharge-o;
+    }
+}
+.icon-link-o {
+    &:before {
+        content: @icon-link-o;
+    }
+}
+.icon-unlink-o {
+    &:before {
+        content: @icon-unlink-o;
+    }
+}
+.icon-monitor1-o {
+    &:before {
+        content: @icon-monitor1-o;
+    }
+}
+.icon-magnify-o {
+    &:before {
+        content: @icon-magnify-o;
+    }
+}
+.icon-narrow-o {
+    &:before {
+        content: @icon-narrow-o;
+    }
+}
+.icon-explanation-1-o {
+    &:before {
+        content: @icon-explanation-1-o;
+    }
+}
+.icon-arrow-under-o {
+    &:before {
+        content: @icon-arrow-under-o;
+    }
+}
+.icon-plus-o {
+    &:before {
+        content: @icon-plus-o;
+    }
+}
+.icon-celf-service-o {
+    &:before {
+        content: @icon-celf-service-o;
+    }
+}
+.icon-cloud-environment-o {
+    &:before {
+        content: @icon-cloud-environment-o;
+    }
+}
+.icon-host-o {
+    &:before {
+        content: @icon-host-o;
+    }
+}
+.icon-cloud-storage-o {
+    &:before {
+        content: @icon-cloud-storage-o;
+    }
+}
+.icon-vpc-o {
+    &:before {
+        content: @icon-vpc-o;
+    }
+}
+.icon-public-net-o {
+    &:before {
+        content: @icon-public-net-o;
+    }
+}
+.icon-rds-o {
+    &:before {
+        content: @icon-rds-o;
+    }
+}
+.icon-shrink-o {
+    &:before {
+        content: @icon-shrink-o;
+    }
+}
+.icon-search-o {
+    &:before {
+        content: @icon-search-o;
+    }
+}
+.icon-cloud-manage-o {
+    &:before {
+        content: @icon-cloud-manage-o;
+    }
+}
+.icon-arrow-under {
+    &:before {
+        content: @icon-arrow-under;
+    }
+}
+.icon-explanation-o {
+    &:before {
+        content: @icon-explanation-o;
+    }
+}
+.icon-support-o {
+    &:before {
+        content: @icon-support-o;
+    }
+}
+.icon-company-o {
+    &:before {
+        content: @icon-company-o;
+    }
+}
+.icon-project-o {
+    &:before {
+        content: @icon-project-o;
+    }
+}
+.icon-to-do-items-o {
+    &:before {
+        content: @icon-to-do-items-o;
+    }
+}
+.icon-examination-o {
+    &:before {
+        content: @icon-examination-o;
+    }
+}
+.icon-warning-o {
+    &:before {
+        content: @icon-warning-o;
+    }
+}
+.icon-resources-o {
+    &:before {
+        content: @icon-resources-o;
+    }
+}
+.icon-calculate-o {
+    &:before {
+        content: @icon-calculate-o;
+    }
+}
+.icon-network-o {
+    &:before {
+        content: @icon-network-o;
+    }
+}
+.icon-storage-o {
+    &:before {
+        content: @icon-storage-o;
+    }
+}
+.icon-statistical-o {
+    &:before {
+        content: @icon-statistical-o;
+    }
+}
+.icon-enlarge-o {
+    &:before {
+        content: @icon-enlarge-o;
+    }
+}
+.icon-close-o {
+    &:before {
+        content: @icon-close-o;
+    }
+}
+.icon-refresh-o {
+    &:before {
+        content: @icon-refresh-o;
+    }
+}
+.icon-more-o {
+    &:before {
+        content: @icon-more-o;
+    }
+}
+.icon-warn-o {
+    &:before {
+        content: @icon-warn-o;
+    }
+}
+.icon-personal-settings-o {
+    &:before {
+        content: @icon-personal-settings-o;
+    }
+}
+.icon-safety-o {
+    &:before {
+        content: @icon-safety-o;
+    }
+}
+.icon-like-o {
+    &:before {
+        content: @icon-like-o;
+    }
+}
+.icon-key-o {
+    &:before {
+        content: @icon-key-o;
+    }
+}
+.icon-withdraw-o {
+    &:before {
+        content: @icon-withdraw-o;
+    }
+}
+.icon-help-o {
+    &:before {
+        content: @icon-help-o;
+    }
+}
+.icon-customer-service-o {
+    &:before {
+        content: @icon-customer-service-o;
+    }
+}
+.icon-feedback-o {
+    &:before {
+        content: @icon-feedback-o;
+    }
+}
+.icon-phone-o {
+    &:before {
+        content: @icon-phone-o;
+    }
+}
+.icon-qq-o {
+    &:before {
+        content: @icon-qq-o;
+    }
+}
+.icon-import-o {
+    &:before {
+        content: @icon-import-o;
+    }
+}
+.icon-export-o {
+    &:before {
+        content: @icon-export-o;
+    }
+}
+.icon-more-1-o {
+    &:before {
+        content: @icon-more-1-o;
+    }
+}
+.icon-docker-o {
+    &:before {
+        content: @icon-docker-o;
+    }
+}
+.icon-disconnect-o {
+    &:before {
+        content: @icon-disconnect-o;
+    }
+}
+.icon-connection-o {
+    &:before {
+        content: @icon-connection-o;
+    }
+}
+.icon-monitor-o {
+    &:before {
+        content: @icon-monitor-o;
+    }
+}
+.icon-cloud-analysis-o {
+    &:before {
+        content: @icon-cloud-analysis-o;
+    }
+}
+.icon-selected-o {
+    &:before {
+        content: @icon-selected-o;
+    }
+}
+.icon-arrow-return {
+    &:before {
+        content: @icon-arrow-return;
+    }
+}
+.icon-paas-o {
+    &:before {
+        content: @icon-paas-o;
+    }
+}
+.icon-daas-o {
+    &:before {
+        content: @icon-daas-o;
+    }
+}
+.icon-all {
+    &:before {
+        content: @icon-all;
+    }
+}
+.icon-iaas-o {
+    &:before {
+        content: @icon-iaas-o;
+    }
+}
+.icon-resources-1-o {
+    &:before {
+        content: @icon-resources-1-o;
+    }
+}
+.icon-stable-1-o {
+    &:before {
+        content: @icon-stable-1-o;
+    }
+}
+.icon-application-o {
+    &:before {
+        content: @icon-application-o;
+    }
+}
+.icon-deploy-o {
+    &:before {
+        content: @icon-deploy-o;
+    }
+}

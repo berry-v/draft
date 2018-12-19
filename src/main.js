@@ -9,7 +9,7 @@ import 'iview/dist/styles/iview.css'
 import './assets/css/style.less'
 
 Vue.config.productionTip = false
-Vue.use(iView, {})
+Vue.use(iView)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
