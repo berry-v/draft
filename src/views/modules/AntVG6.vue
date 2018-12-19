@@ -5,10 +5,9 @@
       <div class="canvas"
            ref="workflow"
            id="workflow"></div>
-      <div class="operation">
-        <div v-show="currentNode"></div>
-        <div v-show="!currentNode">请选择模板</div>
-      </div>
+      <operation :nodeData='currentNode'
+                 @save="nodeSave"
+                 @cancel="removeCurrentNode"></operation>
     </div>
   </div>
 </template>
@@ -16,6 +15,7 @@
 <script>
 
 import helpinfo from './components/helpinfo'
+import operation from './components/operation'
 import G6 from '@antv/g6'
 import '@antv/g6/build/plugin.layout.dagre'
 import '@antv/g6/build/plugin.behaviour.analysis'
@@ -24,7 +24,8 @@ import '@antv/g6/build/plugin.edge.polyline'
 export default {
   name: 'workflow',
   components: {
-    helpinfo
+    helpinfo,
+    operation
   },
   data () {
     return {
@@ -70,10 +71,6 @@ export default {
           source: '0',
           target: '4',
           status: 'error'
-        }, {
-          source: '4',
-          target: '5',
-          status: 'success'
         }, {
           source: '3',
           target: '5',
@@ -238,17 +235,14 @@ export default {
     },
     eventClick (ev) {
       let item = ev.item
-      if (this.currentNode) {
-        this.graph.update(this.currentNode, { active: false })
-        this.currentNode = null
-      }
       if (!item) {
         return
       }
       if (item.type === 'node') {
-        if (!this.temporaryNode || this.temporaryNode.id !== item.id) {
-          this.temporaryNode && this.graph.remove(this.temporaryNode.id)// 点击除临时node外的区域， 移除临时node
-          this.graph.update(item, { active: true }) // 非临时节点点击时添加active标志
+        if (!this.temporaryNode || this.temporaryNode.id !== item.id) { // 点击非临时node
+          this.temporaryNode && this.graph.remove(this.temporaryNode.id)// 移除临时node
+          this.graph.update(this.currentNode, { active: false }) // 取消其他节点的选中
+          this.graph.update(item, { active: true }) // 当前节点选中
           this.currentNode = item
         }
         let id = ev.domEvent.target.id
@@ -286,7 +280,8 @@ export default {
         target: node.id,
         status: 'success'
       })
-
+      this.graph.update(this.currentNode, { active: false })
+      this.currentNode = this.graph.find(node.id)
       this.temporaryNode = node
     },
     deleteNode (item) {
@@ -306,6 +301,20 @@ export default {
           status: edge.model.status
         })
       })
+    },
+    nodeSave (param) {
+      this.graph.update(param.nodeid, {
+        name: param.template,
+        temporary: false // 有临时node的情况
+      })
+      this.temporaryNode = null // 置空临时node
+      this.graph.update(param.edgeid, {
+        status: param.status
+      })
+    },
+    removeCurrentNode () { // cancel 后的操作
+      this.graph.update(this.currentNode, { active: false })
+      this.currentNode = null
     }
   }
 }
