@@ -15,7 +15,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .help-info {
-    height: 42px;
+    height: 47px;
     border-bottom: 1px solid #e9e9e9;
 }
 </style>

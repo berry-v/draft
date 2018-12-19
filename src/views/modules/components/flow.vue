@@ -1,31 +1,17 @@
 <template>
-  <div class="workflow">
-    <helpinfo :helpData="helpData" />
-    <div class="con">
-      <div class="canvas"
-           ref="workflow"
-           id="workflow"></div>
-      <div class="operation">
-        <div v-show="currentNode"></div>
-        <div v-show="!currentNode">请选择模板</div>
-      </div>
-    </div>
-  </div>
+  <div class="canvas"
+       ref="workflow"
+       id="workflow"></div>
 </template>
 
 <script>
-
-import helpinfo from './components/helpinfo'
 import G6 from '@antv/g6'
 import '@antv/g6/build/plugin.layout.dagre'
 import '@antv/g6/build/plugin.behaviour.analysis'
 import '@antv/g6/build/plugin.tool.grid'
 import '@antv/g6/build/plugin.edge.polyline'
 export default {
-  name: 'workflow',
-  components: {
-    helpinfo
-  },
+  name: 'flow',
   data () {
     return {
       helpData: {
@@ -310,6 +296,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-@import url('./antvG6.less');
-</style>
