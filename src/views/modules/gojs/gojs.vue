@@ -119,10 +119,15 @@ export default {
             go.Adornment,
             'Auto',
             $(go.Shape, {
-              fill: null,
-              stroke: 'deepskyblue',
-              strokeWidth: 1.5,
-              strokeDashArray: [5, 2]
+              height: 76,
+              width: 5,
+              fill: '#337ab7',
+              // borderRadius: [2, 0, 0, 2],
+              margin: 2,
+              stroke: null
+              // stroke: 'deepskyblue',
+              // strokeWidth: 1.5,
+              // strokeDashArray: [5, 2]
             })
           )
         },
