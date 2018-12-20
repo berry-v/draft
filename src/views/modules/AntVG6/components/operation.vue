@@ -3,25 +3,30 @@
     <div v-if="form.nodeid">
       <div class="tit">{{form.name || '添加模板'}}</div>
       <div class="pack">
+        <div class="tit">模板/场景</div>
         <RadioGroup v-model="form.template"
                     vertical>
           <Radio v-for="tmp in templateData"
                  :key="tmp.id"
                  :label="tmp.value"></Radio>
         </RadioGroup>
+        <div class="tit">运行状态</div>
         <Select v-model="form.status">
           <Option v-for="(v, k) in status"
                   :value="k"
                   :key="k">{{v}}</Option>
         </Select>
-        <div v-show="form.template">
-          <Button @click="cancel">取消</Button>
+        <div class="btns"
+             v-show="form.template">
+          <Button class="mr-10"
+                  @click="cancel">取消</Button>
           <Button type="primary"
                   @click="save">保存</Button>
         </div>
       </div>
     </div>
-    <div v-else>请选择模板</div>
+    <div v-else
+         class="hint">请选择模板</div>
   </div>
 </template>
 

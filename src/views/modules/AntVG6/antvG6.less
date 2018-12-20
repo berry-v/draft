@@ -2,7 +2,14 @@
   display: flex;
   flex-direction: column;
   .graph-icon {
-    font-size: 16px;
+    font-size: 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: left;
+    line-height: 19px;
     &.icon-groups-btn-add {
       color: #5cb85c;
     }
@@ -12,7 +19,9 @@
   }
   height: 100%;
   .con {
-    height: calc(~'100% - 47px');
+    margin: 15px;
+    height: calc(~'100% - 77px');
+    border: 1px solid #e9e9e9;
     display: flex;
     .canvas {
       flex-grow: 1;
@@ -35,6 +44,23 @@
         padding: 15px;
         display: flex;
         flex-direction: column;
+        .tit {
+          font-size: 16px;
+          margin: 15px 0;
+        }
+      }
+      .btns {
+        margin-top: 30px;
+        text-align: right;
+        .mr-10 {
+          margin-right: 10px;
+        }
+      }
+      .hint {
+        text-align: center;
+        color: #333;
+        line-height: 50px;
+        font-size: 18px;
       }
     }
   }

@@ -1,18 +1,21 @@
 <template>
   <div class="workflow">
     <helpinfo :helpData="helpData" />
-    <div ref="workflowCon"
-         class="con"
-         id="workflow">
-      <div class="canvas"></div>
-      <div class="operation"></div>
+    <div class="con">
+      <div class="canvas"
+           ref="workflow"
+           id="workflow"></div>
+      <operation :nodeData='currentNode'
+                 @save="nodeSave"
+                 @cancel="removeCurrentNode"></operation>
     </div>
   </div>
 </template>
 
 <script>
 
-import helpinfo from '@/views/components/basic/helpinfo'
+import helpinfo from '../components/helpinfo'
+import operation from './components/operation'
 import G6 from '@antv/g6'
 import '@antv/g6/build/plugin.layout.dagre'
 import '@antv/g6/build/plugin.behaviour.analysis'
@@ -21,7 +24,8 @@ import '@antv/g6/build/plugin.edge.polyline'
 export default {
   name: 'workflow',
   components: {
-    helpinfo
+    helpinfo,
+    operation
   },
   data () {
     return {
@@ -31,6 +35,12 @@ export default {
       },
       currentNode: null,
       temporaryNode: null,
+      lineStyle: {
+        'success': '#5cb85c',
+        'error': '#d9534f',
+        'start': '#337ab7',
+        'new': '#d7d7d7'
+      },
       data: {
         nodes: [{
           id: '0',
@@ -68,10 +78,6 @@ export default {
           target: '4',
           status: 'error'
         }, {
-          source: '4',
-          target: '5',
-          status: 'success'
-        }, {
           source: '3',
           target: '5',
           status: 'success'
@@ -85,17 +91,18 @@ export default {
   },
   methods: {
     init () {
+      let pack = this.$refs.workflow
       const PluginDagre = G6.Plugins['layout.dagre'] // eslint检查出错， 所以提出来
       const PluginGrid = G6.Plugins['tool.grid']
       this.graph = new G6.Graph({
         container: 'workflow',
         renderer: 'svg',
         fitView: 'cc',
-        width: '1200',
-        height: '800',
+        width: pack.offsetWidth,
+        height: pack.offsetHeight,
         defaultIntersectBox: 'rect',
         modes: {
-          default: ['panCanvas', 'panBlank', 'wheelZoom']
+          default: ['panCanvas', 'wheelZoom']
         },
         plugins: [
           new PluginDagre({
@@ -220,11 +227,12 @@ export default {
           ]
         }
       })
+      let _self = this
       this.graph.edge({
         shape: 'customLine',
         style ({ status }) {
           return {
-            stroke: { 'success': '#5cb85c', 'error': '#d9534f' }[status] || '#333',
+            stroke: _self.lineStyle[status] || '#d7d7d7',
             lineWidth: 3
           }
         }
@@ -232,16 +240,14 @@ export default {
     },
     eventClick (ev) {
       let item = ev.item
-      if (this.currentNode) {
-        this.graph.update(this.currentNode, { active: false })
-      }
       if (!item) {
         return
       }
       if (item.type === 'node') {
-        if (!this.temporaryNode || this.temporaryNode.id !== item.id) {
-          this.temporaryNode && this.graph.remove(this.temporaryNode.id)// 点击除临时node外的区域， 移除临时node
-          this.graph.update(item, { active: true }) // 非临时节点点击时添加active标志
+        if (!this.temporaryNode || this.temporaryNode.id !== item.id) { // 点击非临时node
+          this.temporaryNode && this.graph.remove(this.temporaryNode.id)// 移除临时node
+          this.graph.update(this.currentNode, { active: false }) // 取消其他节点的选中
+          this.graph.update(item, { active: true }) // 当前节点选中
           this.currentNode = item
         }
         let id = ev.domEvent.target.id
@@ -277,51 +283,52 @@ export default {
       this.graph.add('edge', {
         source: item.id,
         target: node.id,
-        status: 'success'
+        status: 'new'
       })
-
+      this.graph.update(this.currentNode, { active: false })
+      this.currentNode = this.graph.find(node.id)
       this.temporaryNode = node
     },
     deleteNode (item) {
-      let parentId
-      let childs = item.getEdges().filter(edge => {
-        if (edge.model.target === item.model.id) {
-          parentId = edge.model.source
-          return false
+      this.$Modal.info({
+        title: '确定要删除此工作流节点?',
+        onOk: () => {
+          let parentId
+          let childs = item.getEdges().filter(edge => {
+            if (edge.model.target === item.model.id) {
+              parentId = edge.model.source
+              return false
+            }
+            return true
+          })
+          this.graph.remove(item.id)
+          childs.forEach(edge => {
+            edge.target.getEdges().length === 0 && this.graph.add('edge', {
+              source: parentId,
+              target: edge.model.target,
+              status: edge.model.status
+            })
+          })
         }
-        return true
       })
-      this.graph.remove(item.id)
-      childs.forEach(edge => {
-        edge.target.getEdges().length === 0 && this.graph.add('edge', {
-          source: parentId,
-          target: edge.model.target,
-          status: edge.model.status
-        })
+    },
+    nodeSave (param) {
+      this.graph.update(param.nodeid, {
+        name: param.template,
+        temporary: false // 有临时node的情况
       })
+      this.temporaryNode = null // 置空临时node
+      this.graph.update(param.edgeid, {
+        status: param.status
+      })
+    },
+    removeCurrentNode () { // cancel 后的操作
+      this.graph.update(this.currentNode, { active: false })
+      this.currentNode = null
     }
   }
 }
 </script>
 <style lang="less">
-.workflow {
-    display: flex;
-    flex-direction: column;
-    .graph-icon {
-        &.icon-groups-btn-add {
-            color: #5cb85c;
-        }
-        &.icon-groups-btn-del {
-            color: #d9534f;
-        }
-    }
-    .con {
-        display: flex;
-        .canvas {
-            #canvas_6 {
-                cursor: auto !important;
-            }
-        }
-    }
-}
+@import url('./antvG6.less');
 </style>

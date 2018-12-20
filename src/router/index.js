@@ -11,6 +11,10 @@ export default new Router({
   }, {
     path: '/AntVG6',
     name: 'AntVG6',
-    component: () => import('@/views/modules/AntVG6.vue')
+    component: () => import('@/views/modules/AntVG6/AntVG6.vue')
+  }, {
+    path: '/gojs',
+    name: 'gojs',
+    component: () => import('@/views/modules/gojs/gojs.vue')
   }]
 })
