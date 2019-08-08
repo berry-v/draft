@@ -16,5 +16,9 @@ export default new Router({
     path: '/gojs',
     name: 'gojs',
     component: () => import('@/views/modules/gojs/gojs.vue')
+  }, {
+    path: '/gojsdemo',
+    name: 'gojsdemo',
+    component: () => import('@/views/modules/gojsDemo/gojs.vue')
   }]
 })
